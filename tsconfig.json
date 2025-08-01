@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        /* JS / target --------------------------------------------------- */
+        "target": "ES2023",
+        "lib": ["ES2023", "DOM", "DOM.Iterable"],
+        "module": "ESNext",
+        "moduleResolution": "node", // <- important, not "bundler"
+        "jsx": "react-jsx",
+        "useDefineForClassFields": true,
+
+        /* Path alias ---------------------------------------------------- */
+        "baseUrl": ".", // <- must be inside compilerOptions
+        "paths": {
+            "@/*": ["src/*"]
+        },
+
+        /* Lint / safety ------------------------------------------------- */
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUncheckedSideEffectImports": true,
+        "skipLibCheck": true,
+
+        /* Misc ---------------------------------------------------------- */
+        "types": ["node"],
+        "allowImportingTsExtensions": true,
+        "moduleDetection": "force",
+        "noEmit": true
+    },
+
+    /* What files belong to the project? ------------------------------ */
+    "include": ["src", "vite.config.ts"],
+    "exclude": ["dist", "node_modules"]
+}
