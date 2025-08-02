@@ -1,69 +1,55 @@
-# React + TypeScript + Vite
+# Upsales Task Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the Upsales task. It is built using modern web technologies and provides a user-friendly interface for managing entries.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Add, update, and delete entries.
+-   Infinite scrolling for entries table.
+-   Responsive design.
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Make sure you have the following installed on your system:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+-   [Node.js](https://nodejs.org/) (v16 or later)
+-   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Setup Instructions
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone the repository**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    ```bash
+    git clone <repository-url>
+    cd upsales_task_frontend
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2.  **Install dependencies**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    ```bash
+    yarn install
+    ```
+
+3.  **Set up environment variables**
+    Create a `.env` file in the root directory and configure it. You can use the provided `.env.example` file as a reference:
+
+        ```bash
+        cp .env.example .env
+        ```
+
+        - `PORT`: The port on which the frontend will run.
+        - `API_URL`: The base URL for the backend API.
+
+4.  **Start the development server**
+
+    ```bash
+    yarn dev
+    ```
+
+    The application will be available at `http://localhost:<PORT>`.
+
+## Scripts
+
+-   `yarn dev`: Start the development server.
+-   `yarn build`: Build the application for production.
+-   `yarn preview`: Preview the production build.
