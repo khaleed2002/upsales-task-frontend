@@ -20,7 +20,7 @@ Make sure you have the following installed on your system:
 1.  **Clone the repository**
 
     ```bash
-    git clone https://github.com/khaleed2002/cd upsales_task_frontend.git
+    git clone https://github.com/khaleed2002/upsales_task_frontend.git
     cd upsales_task_frontend
     ```
 
