@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 export const FooterLayout = () => {
     return (
-        <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 to-indigo-100">
+        <div className="min-h-screen flex flex-col">
             <main className="flex-1 flex flex-col justify-center items-center">
                 <Outlet />
             </main>
